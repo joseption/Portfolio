@@ -9,27 +9,40 @@ import {
   DiPython,
   DiGit,
   DiJava,
+  DiAngularSimple,
+  DiSass,
+  DiIllustrator,
+  DiPhotoshop,
 } from "react-icons/di";
 import {
   SiRedis,
   SiFirebase,
   SiNextdotjs,
-  SiSolidity,
   SiPostgresql,
+  SiExpress,
+  SiAdobexd,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import { TbBrandCSharp, TbHtml, TbBrandTypescript } from "react-icons/tb";
+import { MdCss } from "react-icons/md";
+import { FaFigma } from "react-icons/fa";
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
+    <Row style={{ justifyContent: "center", paddingBottom: "5rem" }}>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
+        <TbBrandCSharp />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <TbHtml />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <MdCss />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiSass />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiNodejs />
@@ -38,31 +51,25 @@ function Techstack() {
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
+        <DiAngularSimple />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <TbBrandTypescript />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
+        <SiExpress />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <FaFigma />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
+        <SiAdobexd />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
+        <DiPhotoshop />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
+        <DiIllustrator />
       </Col>
     </Row>
   );
