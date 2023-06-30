@@ -15,6 +15,20 @@ function ResumeNew() {
     setWidth(window.innerWidth);
   }, []);
 
+  const onDownload = () => {
+    fetch(pdf).then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Joseph_Alfonso_Resume.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <div>
       <Container fluid className="resume-section">
@@ -22,8 +36,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
-            target="_blank"
+            onClick={onDownload}
             style={{ maxWidth: "200px" }}
           >
             <AiOutlineDownload />
@@ -44,8 +57,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
-            target="_blank"
+            onClick={onDownload}
             style={{ maxWidth: "200px" }}
           >
             <AiOutlineDownload />
